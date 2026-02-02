@@ -1,165 +1,169 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Preview</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Перевірка доступу</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Online preview" />
-  <meta property="og:description" content="Preview page" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/dreamshot666/preview-site/main/photo_2026-01-30_21-48-40.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
 
-  <!-- META PIXEL -->
-  <script>
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;
-      n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);t.async=!0;
-      t.src=v;
-      s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  background: #0e1621;
+  position: relative;
+}
 
-    fbq('init', '670687252732942');
-    fbq('track', 'PageView');
-  </script>
+/* ===== PAGE 1 ===== */
+#check {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  background: rgba(14,22,33,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=670687252732942&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- END META PIXEL -->
+.check-box {
+  background: #111827;
+  padding: 24px;
+  border-radius: 14px;
+  text-align: center;
+  width: 90%;
+}
 
-  <style>
-    body {
-      margin: 0;
-      background: #0f0f0f;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .wrapper {
-      width: 100%;
-      max-width: 420px;
-      background: #0e1621;
-      min-height: 100vh;
-    }
-    .topbar {
-      background: #1f2936;
-      padding: 12px;
-      display: flex;
-      align-items: center;
-    }
-    .tg-logo {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #2aabee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 6px;
-    }
-    .tg-logo svg {
-      width: 16px;
-      height: 16px;
-      fill: #fff;
-      margin-left: 1px;
-    }
-    .content {
-      padding: 26px 16px;
-      text-align: center;
-    }
-    .avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      margin: 0 auto 16px;
-      background-image: url('https://raw.githubusercontent.com/dreamshot666/preview-site/main/photo_2026-01-30_21-48-40.jpg');
-      background-size: 105%;
-      background-position: center 28%;
-      background-repeat: no-repeat;
-    }
-    h1 {
-      font-size: 20px;
-      margin: 0 0 6px;
-      font-weight: 600;
-    }
-    .subs {
-      color: #9ca3af;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-    .main-btn {
-      background: #2aabee;
-      color: #fff;
-      border: none;
-      width: 100%;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 10px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .main-btn:hover {
-      opacity: 0.9;
-    }
-    .hint {
-      margin-top: 14px;
-      font-size: 13px;
-      color: #9ca3af;
-      line-height: 1.4;
-    }
-  </style>
+.check-box h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.check-box p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.check-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.human {
+  background: #22c55e;
+  color: #000;
+}
+
+.bot {
+  background: #374151;
+  color: #fff;
+}
+
+/* ===== PAGE 2 ===== */
+.content {
+  padding: 26px 16px;
+  text-align: center;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 40px auto 16px;
+  background-image: url('PUT_YOUR_PHOTO_HERE.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.subs {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 24px;
+}
+
+.main-btn {
+  background: #2aabee;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hint {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+</style>
 </head>
 
 <body>
 
 <div class="wrapper">
-  <div class="topbar">
-    <div class="tg-logo">
-      <svg viewBox="0 0 240 240">
-        <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm58.4 81.2-19.8 93.2c-1.5 6.6-5.4 8.2-10.9 5.1l-30.1-22.2-14.5 14c-1.6 1.6-2.9 2.9-6 2.9l2.1-30.3 55.2-49.8c2.4-2.1-.5-3.3-3.7-1.2l-68.3 43-29.4-9.2c-6.4-2-6.5-6.4 1.3-9.4l114.8-44.3c5.3-2 10 .9 8.3 8.2z"/>
-      </svg>
-    </div>
-  </div>
 
-  <div class="content">
-    <div class="avatar"></div>
-    <h1>dreams_hot</h1>
-    <div class="subs">133 subscribers</div>
+<!-- PAGE 1 -->
+<div id="check">
+  <div class="check-box">
+    <h2>Перевірка безпеки</h2>
+    <p>Підтвердіть, що ви людина, щоб продовжити</p>
 
-    <button class="main-btn" onclick="go()">VIEW</button>
-
-    <div class="hint">
-      Preview page<br>
-      Tap to continue
-    </div>
+    <button class="check-btn human" onclick="goHuman()">Я людина</button>
+    <button class="check-btn bot" onclick="goBot()">Я бот</button>
   </div>
 </div>
 
-<script>
-  function go() {
-    if (typeof fbq === 'function') {
-      fbq('track', 'Lead', {}, {eventID: 'lead_' + Date.now()});
-    }
+<!-- PAGE 2 -->
+<div class="content">
+  <div class="avatar"></div>
+  <h1>Dreams</h1>
+  <div class="subs">Онлайн зараз</div>
 
-    // ⏳ ДАЄМО META ЧАС
-    setTimeout(function () {
-      window.location.href = "https://t.me/rabone888_bot";
-    }, 1200);
-  }
+  <button class="main-btn" onclick="goTG()">НАПИШИ ЇЙ ЗАРАЗ!</button>
+
+  <div class="hint">
+    Натисни кнопку, щоб продовжити спілкування
+  </div>
+</div>
+
+</div>
+
+<script>
+function goHuman() {
+  document.getElementById('check').style.display = 'none';
+}
+
+function goBot() {
+  alert('Помилка перевірки. Спробуйте ще раз.');
+}
+
+function goTG() {
+  window.location.href = "https://t.me/rabone888_bot";
+}
 </script>
 
 </body>
