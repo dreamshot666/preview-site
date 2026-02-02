@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Profile preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f7ede8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #e0665b;
+}
+
+.avatar-wrap {
+  margin: 24px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 6px solid #f2b1a9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('PUT_YOUR_PHOTO_HERE.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  width: 48%;
+  font-size: 14px;
+}
+
+.main-btn {
+  margin-top: 10px;
+  background: #e0665b;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 17px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 24px;
+  font-size: 12px;
+  color: #a1a1a1;
+}
+
+.footer a {
+  color: #e0665b;
+  text-decoration: none;
+  margin: 0 6px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+  <h1>Відчуваєш самотність?</h1>
+
+  <div class="avatar-wrap">
+    <div class="avatar"></div>
+  </div>
+
+  <div class="info">
+    <div class="card">Emily, 26</div>
+    <div class="card">7 км від вас</div>
+  </div>
+
+  <button class="main-btn" onclick="goTG()">НАПИШИ ЇЙ ЗАРАЗ!</button>
+
+  <div class="footer">
+    <a href="#">Legal Terms</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Unsubscribe</a>
+  </div>
+
+</div>
+
+<script>
+function goTG() {
+  window.location.href = "https://t.me/rabone888_bot";
+}
+</script>
+</body>
+</html>
