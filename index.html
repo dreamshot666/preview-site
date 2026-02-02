@@ -5,13 +5,32 @@
   <title>Preview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- OPEN GRAPH (важливо для прев’ю) -->
+  <!-- OPEN GRAPH -->
   <meta property="og:title" content="Online preview" />
   <meta property="og:description" content="Preview page" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://raw.githubusercontent.com/dreamshot666/preview-site/main/photo_2026-01-30_21-48-40.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+
+  <!-- META PIXEL -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '670687252732942');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=670687252732942&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- END META PIXEL -->
 
   <style>
     body {
@@ -31,7 +50,6 @@
       min-height: 100vh;
     }
 
-    /* TOP BAR */
     .topbar {
       background: #1f2936;
       padding: 12px;
@@ -57,13 +75,11 @@
       margin-left: 1px;
     }
 
-    /* CONTENT */
     .content {
       padding: 26px 16px;
       text-align: center;
     }
 
-    /* AVATAR */
     .avatar {
       width: 96px;
       height: 96px;
@@ -111,6 +127,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -143,6 +160,10 @@
 
 <script>
   function go() {
+    // 🔥 Конверсія
+    fbq('track', 'Lead');
+
+    // редірект
     setTimeout(function () {
       window.location.href = "https://t.me/rabone888_bot";
     }, 600);
