@@ -15,20 +15,27 @@
 
   <!-- META PIXEL -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '670687252732942');
-  fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '670687252732942');
+    fbq('track', 'PageView');
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=670687252732942&ev=PageView&noscript=1"/>
+      src="https://www.facebook.com/tr?id=670687252732942&ev=PageView&noscript=1"/>
   </noscript>
   <!-- END META PIXEL -->
 
@@ -42,21 +49,18 @@
       justify-content: center;
       min-height: 100vh;
     }
-
     .wrapper {
       width: 100%;
       max-width: 420px;
       background: #0e1621;
       min-height: 100vh;
     }
-
     .topbar {
       background: #1f2936;
       padding: 12px;
       display: flex;
       align-items: center;
     }
-
     .tg-logo {
       width: 28px;
       height: 28px;
@@ -67,19 +71,16 @@
       justify-content: center;
       margin-left: 6px;
     }
-
     .tg-logo svg {
       width: 16px;
       height: 16px;
       fill: #fff;
       margin-left: 1px;
     }
-
     .content {
       padding: 26px 16px;
       text-align: center;
     }
-
     .avatar {
       width: 96px;
       height: 96px;
@@ -90,19 +91,16 @@
       background-position: center 28%;
       background-repeat: no-repeat;
     }
-
     h1 {
       font-size: 20px;
       margin: 0 0 6px;
       font-weight: 600;
     }
-
     .subs {
       color: #9ca3af;
       font-size: 14px;
       margin-bottom: 20px;
     }
-
     .main-btn {
       background: #2aabee;
       color: #fff;
@@ -114,11 +112,9 @@
       font-weight: 600;
       cursor: pointer;
     }
-
     .main-btn:hover {
       opacity: 0.9;
     }
-
     .hint {
       margin-top: 14px;
       font-size: 13px;
@@ -131,7 +127,6 @@
 <body>
 
 <div class="wrapper">
-
   <div class="topbar">
     <div class="tg-logo">
       <svg viewBox="0 0 240 240">
@@ -141,9 +136,7 @@
   </div>
 
   <div class="content">
-
     <div class="avatar"></div>
-
     <h1>dreams_hot</h1>
     <div class="subs">133 subscribers</div>
 
@@ -153,20 +146,19 @@
       Preview page<br>
       Tap to continue
     </div>
-
   </div>
-
 </div>
 
 <script>
   function go() {
-    // 🔥 Конверсія
-    fbq('track', 'Lead');
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead', {}, {eventID: 'lead_' + Date.now()});
+    }
 
-    // редірект
+    // ⏳ ДАЄМО META ЧАС
     setTimeout(function () {
       window.location.href = "https://t.me/rabone888_bot";
-    }, 600);
+    }, 1200);
   }
 </script>
 
